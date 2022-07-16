@@ -148,4 +148,43 @@ section {
 main {
     background-color: var(--grey);
     grid-area: 2 / 2 / 3 / 3;
+    display: grid;
+    grid-template: 1fr 4fr 4fr / 7fr 3fr;
+    gap: 15px;
+    padding: 30px;
+    overflow: auto;
+}
+
+.projects {
+    grid-area: 2 / 1 / 4 / 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 325px);
+    gap: 50px;
+    padding: 20px;
+}
+
+.project {
+    background-color: var(--white);
+    border: 1px solid var(--white);
+    border-left: 7px solid var(--pink);
+    border-radius: 15px;
+    height: 200px;
+    border-top-left-radius: 7.5px;
+    border-bottom-left-radius: 7.5px;
+    padding: 20px;
+}
+
+.body-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 50%
+}
+
+.project-features {
+    display: flex;
+    height: 50%;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 20px;
 }
