@@ -26,9 +26,6 @@ menu, nav, section {
 footer, header, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
 ol, ul {
 	list-style: none;
 }
@@ -58,7 +55,8 @@ ol, ul {
     width: 70px;
 }
 
-.icon-medium {
+.icon-medium,
+.profile img {
     height: 35px;
     width: 35px;
 }
@@ -83,6 +81,7 @@ body {
     width: 100%;
     display: grid;
     grid-template: minmax(90px, 9fr) minmax(310px, 31fr) / minmax(80px, 1fr) minmax(320px, 4fr);
+    line-height: 1;
 }
 
 header {
@@ -149,14 +148,14 @@ main {
     background-color: var(--grey);
     grid-area: 2 / 2 / 3 / 3;
     display: grid;
-    grid-template: 1fr 4fr 4fr / 7fr 3fr;
+    grid-template: 1fr 4fr 1fr 4fr / 7fr 3fr;
     gap: 15px;
     padding: 30px;
     overflow: auto;
 }
 
 .projects {
-    grid-area: 2 / 1 / 4 / 2;
+    grid-area: 2 / 1 / 5 / 2;
     display: grid;
     grid-template-columns: repeat(auto-fit, 325px);
     gap: 50px;
@@ -187,4 +186,41 @@ main {
     justify-content: flex-end;
     align-items: flex-end;
     gap: 20px;
+}
+
+.announcements {
+    display: grid;
+    margin-top: 20px;
+    background-color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 15px;
+    font-size: .7rem;
+}
+
+.announcement {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+#middle {
+    border-top: 3px solid var(--grey);
+    border-bottom: 3px solid var(--grey);
+}
+
+#last {
+    margin-top: 50px;
+}
+
+.profile {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.empty-space {
+    height: 1px;
 }
